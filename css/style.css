@@ -55,7 +55,7 @@ h1,h2,h3,h4,h5,h6{
     font-family: 'Open Sans', sans-serif;
 }
 .colored-text{
-    color: #03a9f4;
+    color: #2980b9;
 }
 
 .alo{
@@ -84,7 +84,7 @@ h1,h2,h3,h4,h5,h6{
     margin-top: 20px;
     display: block;
     text-align: center;
-    background-color:  #03a9f4;
+    background-color:  #2980b9;
     margin-left: auto;
     margin-right: auto;
 }
@@ -106,53 +106,65 @@ h1,h2,h3,h4,h5,h6{
 .no-padding{
     padding: 0px;
 }
-/****navbar css****/
-@media(min-width:768px){
-    nav.before-color{
-        background-color: rgba(255,255,255,0);
-        padding: 15px 0;
+/* Navbar */
+@media (min-width: 768px) {
+    .navbar-default .navbar-brand {
+        color: #000;
+        font-size: 35px;
+        font-weight: 400;
     }
-    nav.after-color{
-        background-color: rgba(255,255,255,.95);
-        padding: 0px 0;
-        box-shadow: 0px 1px 5px rgba(0,0,0,0.302);
-        -webkit-box-shadow: 0px 1px 5px rgba(0,0,0,0.302);
+
+    .navbar-default .navbar-nav>li>a {
+        color: #333;
     }
-    nav.before-color.navbar-default .navbar-brand{
-    color:#fff;
-    font-size: 35px;
-    font-weight: 400;
-}
-    nav.after-color.navbar-default .navbar-brand{
-    color:#000;
-    font-size: 35px;
-    font-weight: 400;
-}
-    nav.before-color .navbar-nav>li>a{
-        color:#fff;
+
+    .navbar-default .navbar-nav>li>a:hover {
+        color: #2980b9;
     }
-    
-    nav.after-color .navbar-nav>li>a{
-        color:#333;
+
+    .navbar-default .navbar-nav>.active>a,
+    .navbar-default .navbar-nav>.active>a:focus,
+    .navbar-default .navbar-nav>.active>a:hover {
+        color: #2980b9;
+        background-color: transparent;
     }
-    .nav>li>a {
+
+    .navbar-default .navbar-nav>.open>a,
+    .navbar-default .navbar-nav>.open>a:focus,
+    .navbar-default .navbar-nav>.open>a:hover {
+        color: #2980b9;
+        background-color: transparent;
+    }
+
+    .navbar-default .navbar-brand,
+    .navbar-default .navbar-nav>li>a {
+        font-weight: 700;
+        font-size: 12px;
+        text-transform: uppercase;
+        font-family: 'Open Sans', sans-serif;
+        letter-spacing: 1px;
+    }
+
+    .navbar-default .nav>li>a {
         position: relative;
         display: block;
         padding: 15px 11px;
+    }
 
+    .navbar-default .nav>li {
+        border-left: 1px solid transparent;
     }
-    nav.before-color .nav>li{
-        border-left: 1px solid transparent;    
-    }
-    nav.after-color .nav>li{
-        border-left: 1px solid rgba(0,0,0,0.1);    
+
+    .navbar-default .nav>li:hover {
+        border-left: 1px solid rgba(0, 0, 0, 0.1);
     }
 }
+
 .navbar-default {
-    background-color: rgba(255,255,255,.95);
-    border:0px;
+    background-color: white;
+    border: 0px;
     margin: 0px;
-    width:100%;
+    width: 100%;
     left: 0;
     right: 0;
     padding: 5px 0;
@@ -171,6 +183,17 @@ h1,h2,h3,h4,h5,h6{
     font-size: 35px;
     font-weight: 400;
 }
+@media (max-width: 767px) {
+  .navbar-default .navbar-brand {
+    font-size: 25px;
+    width: 200px; /* Adjust the width to your desired value */
+    max-width: 100%; /* Ensure the logo doesn't exceed the screen width */
+    text-overflow: ellipsis; /* Add ellipsis (...) for long logos */
+    white-space: nowrap; /* Prevent the logo from wrapping */
+    overflow: hidden; /* Hide any overflowing content */
+  }
+}
+
 .navbar-default .navbar-nav>li>a {
     color: #333;
     font-weight: 700;
@@ -179,24 +202,32 @@ h1,h2,h3,h4,h5,h6{
     font-family: 'Open Sans', sans-serif;
     letter-spacing: 1px;
 }
-.navbar-default .navbar-nav>li>a:hover{
-        color: #03a9f4;
-    }
-.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
-    color:  #03a9f4;
-    background-color: transparent;
-}
-.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
-  color:  #03a9f4;
-  background-color: transparent;
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: #2980b9;
 }
 
-.navbar-default .navbar-brand{
-    color:#000;
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover {
+    color: #2980b9;
+    background-color: transparent;
+}
+
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:focus,
+.navbar-default .navbar-nav>.open>a:hover {
+    color: #2980b9;
+    background-color: transparent;
+}
+
+.navbar-default .navbar-brand {
+    color: #000;
     font-size: 35px;
     font-weight: 400;
 }
-.navbar-default .navbar-nav>li:hover .dropdown-menu{
+
+.navbar-default .navbar-nav>li:hover .dropdown-menu {
     display: block;
 }
 /*********
@@ -228,7 +259,7 @@ BUTTONS
     background-color: transparent;
 }
 .btn-white:hover{
-    color: #03a9f4;
+    color: #2980b9;
     border-color: #fff;
     background-color: #fff;
 }
@@ -244,15 +275,15 @@ BUTTONS
     background-color:#333;
 }
 .btn-border-theme{
-    border: 1px solid  #03a9f4;
+    border: 1px solid  #2980b9;
     color: #03a9f4;
     padding: 10px 25px;
     background-color: transparent;
 }
 .btn-border-theme:hover{
     color:#fff;
-    border-color: #03a9f4;
-    background-color:  #03a9f4;
+    border-color: #2980b9;
+    background-color:  #2980b9;
 }
 .btn-radius{
     padding: 13px 40px;
@@ -338,7 +369,7 @@ services icons css
     text-align: center;
     border-radius: 50%;
     -webkit-border-radius: 50%;
-    border: 1px solid  #03a9f4;
+    border: 1px solid  #2980b9;
 }
 /************
 
@@ -395,7 +426,7 @@ TEAM CSS
     color:#333;
 }
 .social li a:hover i{
-    color: #03a9f4
+    color: #2980b9
 
 }
 
@@ -423,7 +454,7 @@ TEAM CSS
     background-color: rgba(255,255,255,0.8);
 }
 .fact-box h2{
-    color: #03a9f4;
+    color: #2980b9;
     font-size: 45px;
 }
 .fact-box h5{
@@ -498,7 +529,7 @@ TEAM CSS
 }
 .slide-items h5{
     margin-bottom: 0px;
-    color: #03a9f4;
+    color: #2980b9;
 }
 .testimonials .flexslider{
     background: rgba(0,0,0,0);
@@ -624,7 +655,7 @@ TEAM CSS
     margin: 0px;
 }
 .news-inner .date{
-    color: #03a9f4;
+    color: #2980b9;
     font-weight: 400;
     font-style: italic;
 }
@@ -667,7 +698,7 @@ TEAM CSS
     color:#999;
 }
 .post-option a:hover{
-    color: #03a9f4;
+    color: #2980b9;
 }
 /****
 
@@ -684,7 +715,7 @@ cta
     margin-bottom:30px;
 }
 .cta-bg{
-    background-color:  #03a9f4;
+    background-color:  #2980b9;
     padding-top: 40px;
 }
 .cta-bg h1{
@@ -749,12 +780,12 @@ cta
 .help-block ul li{
     color:#fff;
     padding: 0px 10px;
-    background-color:  #03a9f4;
+    background-color:  #2980b9;
     font-size: 12px;
 }
 .footer{
     padding: 50px 0;
-    background-color:  #03a9f4;
+    background-color:  #2980b9;
 }
 .footer .alo{
     display: block;
@@ -812,11 +843,11 @@ cta
 }
 .header.active h3{
     color:#fff;
-    background-color:  #03a9f4;
+    background-color:  #2980b9;
 }
 /******inner pages******/
 .page-title{
-    background-color: #2B8694;
+    background-color: #2980b9;
     padding-top: 250px;
 }
 .page-title h3{
@@ -835,5 +866,5 @@ cta
     
 }
 .pager li>a, .pager li>span{
-    color: #03a9f4;
+    color: #2980b9;
 }
